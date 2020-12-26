@@ -1,0 +1,28 @@
+logging.level:
+  org:
+    springframework:
+      cloud: DEBUG
+      web: DEBUG
+
+spring:
+  application:
+    name: demo-api-a
+  cloud:
+    config:
+      uri: http://localhost:8080
+      label: release(_)1.0
+      discovery:
+        enabled: false
+    vault:
+      namespace: secret
+      token: ${VAULT_TOKEN}
+      scheme: http
+      kv.enabled: true
+
+server:
+  port: 9011
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
