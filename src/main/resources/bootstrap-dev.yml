@@ -18,6 +18,13 @@ spring:
       token: ${VAULT_TOKEN}
       scheme: http
       kv.enabled: true
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.value}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 9011
@@ -31,3 +38,4 @@ spring.jwt:
   username: demo-api-a
   password: notused
   endpoint: http://localhost:10111/token
+
