@@ -1,4 +1,4 @@
-package com.capgemini.api.demoapia.controller.dto;
+package com.capgemini.api.demoapib.controller.dto;
 
 public class DownStreamResponse {
 

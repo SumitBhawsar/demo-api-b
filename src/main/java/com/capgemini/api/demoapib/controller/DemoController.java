@@ -1,8 +1,8 @@
-package com.capgemini.api.demoapia.controller;
+package com.capgemini.api.demoapib.controller;
 
-import com.capgemini.api.demoapia.config.ApiProperties;
-import com.capgemini.api.demoapia.controller.dto.DownStreamResponse;
-import com.capgemini.api.demoapia.controller.dto.GetDetailsResponse;
+import com.capgemini.api.demoapib.config.ApiProperties;
+import com.capgemini.api.demoapib.controller.dto.DownStreamResponse;
+import com.capgemini.api.demoapib.controller.dto.GetDetailsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,13 +17,13 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RefreshScope
 public class DemoController {
 
-    @Value("${apia.name}")
+    @Value("${apib.name}")
     private String name;
 
-    @Value("${apia.version}")
+    @Value("${apib.version}")
     private String version;
 
-    @Value("${apia.secret}")
+    @Value("${apib.secret}")
     private String secret;
 
     @Autowired

@@ -6,13 +6,13 @@ logging.level:
 
 spring:
   application:
-    name: demo-api-a
+    name: demo-api-b
   cloud:
     config:
-      uri: http://localhost:8080
-      label: release(_)1.0
+      label: release(_)2.0-eureka
       discovery:
-        enabled: false
+        enabled: true
+        service-id: spring-config-server
     vault:
       namespace: secret
       token: ${VAULT_TOKEN}
@@ -27,7 +27,7 @@ spring:
     password: guest
 
 server:
-  port: 9011
+  port: 9021
 management:
   endpoints:
     web:
@@ -35,7 +35,10 @@ management:
         include: '*'
 
 spring.jwt:
-  username: demo-api-a
+  username: ${spring.application.name}
   password: notused
   endpoint: http://localhost:10111/token
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka

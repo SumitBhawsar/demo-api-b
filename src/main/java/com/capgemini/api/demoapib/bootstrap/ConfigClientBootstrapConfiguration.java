@@ -1,6 +1,6 @@
-package com.capgemini.api.demoapia.bootstrap;
+package com.capgemini.api.demoapib.bootstrap;
 
-import com.capgemini.api.demoapia.controller.dto.TokenRequest;
+import com.capgemini.api.demoapib.controller.dto.TokenRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -9,7 +9,6 @@ import org.springframework.cloud.config.client.ConfigServicePropertySourceLocato
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.vault.annotation.VaultPropertySource;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;

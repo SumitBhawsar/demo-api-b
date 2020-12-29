@@ -1,18 +1,20 @@
-package com.capgemini.api.demoapia.config;
+package com.capgemini.api.demoapib.controller.dto;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-@Component
-@ConfigurationProperties(prefix = "apia")
-public class ApiProperties {
+public class GetDetailsResponse {
     private String name;
 
     private String version;
 
     private String secret;
 
-    private String downstreamUrl;
+
+    public GetDetailsResponse() {
+    }
+    public GetDetailsResponse(String name, String version, String secret) {
+        this.name = name;
+        this.version = version;
+        this.secret = secret;
+    }
 
     public String getName() {
         return name;
@@ -36,13 +38,5 @@ public class ApiProperties {
 
     public void setSecret(String secret) {
         this.secret = secret;
-    }
-
-    public String getDownstreamUrl() {
-        return downstreamUrl;
-    }
-
-    public void setDownstreamUrl(String downstreamUrl) {
-        this.downstreamUrl = downstreamUrl;
     }
 }
