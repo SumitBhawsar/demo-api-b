@@ -12,6 +12,8 @@ public class ApiProperties {
 
     private String secret;
 
+    private String downstreamUrl;
+
     public String getName() {
         return name;
     }
@@ -34,5 +36,13 @@ public class ApiProperties {
 
     public void setSecret(String secret) {
         this.secret = secret;
+    }
+
+    public String getDownstreamUrl() {
+        return downstreamUrl;
+    }
+
+    public void setDownstreamUrl(String downstreamUrl) {
+        this.downstreamUrl = downstreamUrl;
     }
 }
