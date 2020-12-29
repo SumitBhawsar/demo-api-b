@@ -1,22 +1,18 @@
-package com.capgemini.api.demoapia.controller.dto;
+package com.capgemini.api.demoapib.config;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
-public class GetDetailsResponse {
+@Component
+@ConfigurationProperties(prefix = "apib")
+public class ApiProperties {
     private String name;
 
     private String version;
 
     private String secret;
 
-
-    public GetDetailsResponse() {
-    }
-    public GetDetailsResponse(String name, String version, String secret) {
-        this.name = name;
-        this.version = version;
-        this.secret = secret;
-    }
+    private String downstreamUrl;
 
     public String getName() {
         return name;
@@ -40,5 +36,13 @@ public class GetDetailsResponse {
 
     public void setSecret(String secret) {
         this.secret = secret;
+    }
+
+    public String getDownstreamUrl() {
+        return downstreamUrl;
+    }
+
+    public void setDownstreamUrl(String downstreamUrl) {
+        this.downstreamUrl = downstreamUrl;
     }
 }

@@ -6,7 +6,7 @@ logging.level:
 
 spring:
   application:
-    name: demo-api-a
+    name: demo-api-b
   cloud:
     config:
       uri: http://localhost:8080
@@ -27,7 +27,7 @@ spring:
     password: guest
 
 server:
-  port: 9011
+  port: 9021
 management:
   endpoints:
     web:
@@ -35,7 +35,7 @@ management:
         include: '*'
 
 spring.jwt:
-  username: demo-api-a
+  username: demo-api-b
   password: notused
   endpoint: http://localhost:10111/token
 
