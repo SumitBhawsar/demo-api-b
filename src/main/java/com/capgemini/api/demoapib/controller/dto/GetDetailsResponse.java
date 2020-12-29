@@ -1,6 +1,4 @@
-package com.capgemini.api.demoapia.controller.dto;
-
-import org.springframework.beans.factory.annotation.Value;
+package com.capgemini.api.demoapib.controller.dto;
 
 public class GetDetailsResponse {
     private String name;

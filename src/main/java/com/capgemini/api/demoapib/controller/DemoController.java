@@ -1,6 +1,6 @@
-package com.capgemini.api.demoapia.controller;
+package com.capgemini.api.demoapib.controller;
 
-import com.capgemini.api.demoapia.controller.dto.GetDetailsResponse;
+import com.capgemini.api.demoapib.controller.dto.GetDetailsResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
